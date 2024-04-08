@@ -8,14 +8,6 @@ const Nav = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
-  const closeDropdown = () => {
-    setDropdownOpen(false);
-  };
-
   return (
     <nav className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 md:flex md:justify-between items-center">
