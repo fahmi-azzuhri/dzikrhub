@@ -1,28 +1,22 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
-  const closeDropdown = () => {
-    setDropdownOpen(false);
   };
 
   return (
     <nav className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 md:flex md:justify-between items-center">
         <div className="flex items-center justify-between w-full">
-          <a href="#" className="flex items-center py-5 px-2 text-white flex-1">
+          <Link
+            to={"/"}
+            className="flex items-center py-5 px-2 text-white flex-1"
+          >
             <span className="font-bold">DzikrHub App</span>
-          </a>
+          </Link>
           <div className="md:hidden flex items-center">
             <button className="mobile-menu-button" onClick={toggleMobileMenu}>
               <svg
@@ -46,19 +40,19 @@ const Nav = () => {
           </div>
         </div>
         <div
-          className={`md:flex md:flex-row flex-col items-center text-center justify-start md:space-x-1 pb-3 md:pb-0 navigation-menu ${
+          className={`md:flex md:flex-row flex-col items-center text-center justify-start md:space-x-1 pb-3 md:pb-0 flex-row ${
             isMobileMenuOpen ? "" : "hidden"
           }`}
         >
-          <a href="#" className="py-2 px-3 block">
+          {/* <Link to="/alquran" className="py-2 px-3 block">
             Alquran
-          </a>
-          <a href="#" className="py-2 px-3 block">
+          </Link> */}
+          {/* <a href="#" className="py-2 px-3 block">
             Dzikir
           </a>
           <a href="#" className="py-2 px-3 block">
-            Doa Harian
-          </a>
+            Doa
+          </a> */}
         </div>
       </div>
     </nav>
