@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Nav = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -38,7 +37,7 @@ const Nav = () => {
           </div>
         </div>
         <div
-          className={`md:flex md:flex-row flex-col items-center text-center justify-start md:space-x-1 pb-3 md:pb-0 navigation-menu ${
+          className={`md:flex md:flex-row flex-col items-center text-center justify-start md:space-x-1 pb-3 md:pb-0 flex-row ${
             isMobileMenuOpen ? "" : "hidden"
           }`}
         >
@@ -49,7 +48,7 @@ const Nav = () => {
             Dzikir
           </a>
           <a href="#" className="py-2 px-3 block">
-            Doa Harian
+            Doa
           </a>
         </div>
       </div>
