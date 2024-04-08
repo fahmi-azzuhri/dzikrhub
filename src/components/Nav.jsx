@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -11,9 +11,12 @@ const Nav = () => {
     <nav className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 md:flex md:justify-between items-center">
         <div className="flex items-center justify-between w-full">
-          <a href="#" className="flex items-center py-5 px-2 text-white flex-1">
+          <Link
+            to={"/"}
+            className="flex items-center py-5 px-2 text-white flex-1"
+          >
             <span className="font-bold">DzikrHub App</span>
-          </a>
+          </Link>
           <div className="md:hidden flex items-center">
             <button className="mobile-menu-button" onClick={toggleMobileMenu}>
               <svg
@@ -41,15 +44,15 @@ const Nav = () => {
             isMobileMenuOpen ? "" : "hidden"
           }`}
         >
-          <a href="#" className="py-2 px-3 block">
+          {/* <Link to="/alquran" className="py-2 px-3 block">
             Alquran
-          </a>
-          <a href="#" className="py-2 px-3 block">
+          </Link> */}
+          {/* <a href="#" className="py-2 px-3 block">
             Dzikir
           </a>
           <a href="#" className="py-2 px-3 block">
             Doa
-          </a>
+          </a> */}
         </div>
       </div>
     </nav>
