@@ -25,23 +25,25 @@ export default function AsmaulHusna() {
           يَعْمَلُونَ
         </h1>
 
-        <table className="w-full">
-          <tbody>
-            {asmaulHusna.map((item) => (
-              <tr key={item.id} className="text-center">
-                <td className="bg-white p-4 shadow text-gray-600 text-sm">
-                  {item.indo}
-                </td>
-                <td className="bg-white p-4 shadow text-gray-600 text-sm">
-                  {item.latin}
-                </td>
-                <td className="bg-white p-4 shadow text-lg text-4xl arab">
-                  {item.arab}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <tbody>
+              {asmaulHusna.map((item) => (
+                <tr key={item.id} className="text-center">
+                  <td className="bg-white p-4 shadow text-gray-600 text-sm sm:text-base">
+                    {item.indo}
+                  </td>
+                  <td className="bg-white p-4 shadow text-gray-600 text-sm sm:text-base">
+                    {item.latin}
+                  </td>
+                  <td className="bg-white p-4 shadow text-lg text-4xl arab">
+                    {item.arab}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
