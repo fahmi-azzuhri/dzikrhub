@@ -1,3 +1,13 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Medium";
+    src: local("arslanwessam"),
+      url("./assets/fonts/arslanwessam.ttf") format("truetype");
+  }
+.arab {
+    font-family: 'Medium';
+}
