@@ -35,7 +35,7 @@ export default function AsmaulHusna() {
                 <td className="bg-white p-4 shadow text-gray-600 text-sm">
                   {item.latin}
                 </td>
-                <td className="bg-white p-4 shadow text-lg font-semibold text-2xl">
+                <td className="bg-white p-4 shadow text-lg text-4xl arab">
                   {item.arab}
                 </td>
               </tr>
