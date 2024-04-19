@@ -13,13 +13,13 @@ export default function Dzikir() {
   };
 
   return (
-    <div className="bg-gray-800 h-full p-4">
+    <div className="bg-gray-800 h-screen p-4">
       <div className="container mx-auto">
         <h1 className="text-white text-xl mb-2 text-center">Tasbih Counter</h1>
         <div className="flex flex-col items-center relative">
           <div>
             <img src={tasbih} className="w-80 relative z-10" />
-            <p className="text-white text-4xl font-bold absolute top-10 left-0 right-0 bottom-40 flex items-center justify-center">
+            <p className="text-white text-4xl font-bold absolute top-20 left-0 right-0 bottom-40 flex items-center justify-center">
               {count}
             </p>
           </div>
