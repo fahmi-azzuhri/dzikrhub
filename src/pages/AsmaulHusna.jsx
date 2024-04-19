@@ -19,7 +19,7 @@ export default function AsmaulHusna() {
   return (
     <div className="bg-gray-800 h-full p-4">
       <div className="container mx-auto">
-        <h1 className="text-white text-4xl mb-4 text-center arab">
+        <h1 className="text-white text-5xl mb-4 text-center arab">
           وَلِلَّهِ ٱلْأَسْمَآءُ ٱلْحُسْنَىٰ فَٱدْعُوهُ بِهَا ۖ وَذَرُوا۟
           ٱلَّذِينَ يُلْحِدُونَ فِىٓ أَسْمَٰٓئِهِۦ ۚ سَيُجْزَوْنَ مَا كَانُوا۟
           يَعْمَلُونَ
@@ -36,7 +36,7 @@ export default function AsmaulHusna() {
                   <td className="bg-white p-4 shadow text-gray-600 text-sm sm:text-base">
                     {item.latin}
                   </td>
-                  <td className="bg-white p-4 shadow text-lg text-4xl arab">
+                  <td className="bg-white p-4 shadow text-lg text-5xl arab">
                     {item.arab}
                   </td>
                 </tr>

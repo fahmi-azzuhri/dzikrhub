@@ -34,7 +34,7 @@ export default function Alquran() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <h2 className="text-lg text-right arab text-4xl">
+                <h2 className="text-lg text-right arab text-5xl">
                   {item.name_short}
                 </h2>
                 <p className="text-sm text-right">{item.translation_id}</p>
