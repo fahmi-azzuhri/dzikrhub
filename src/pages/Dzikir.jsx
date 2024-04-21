@@ -3,8 +3,10 @@ import tasbih from "../assets/tasbih.png";
 
 export default function Dzikir() {
   const [count, setCount] = useState(0);
-  const [target, setTarget] = useState(0);
+  const [target, setTarget] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+  const [inputTarget, setInputTarget] = useState(""); // State untuk menyimpan nilai input pengguna
+
   const incrementCount = () => {
     const newCount = count + 1;
     setCount(newCount);
@@ -23,18 +25,35 @@ export default function Dzikir() {
     setModalVisible(false);
   };
 
+  const handleTargetChange = (event) => {
+    setInputTarget(event.target.value);
+  };
+
+  const setTargetFromInput = () => {
+    setTarget(inputTarget);
+  };
+
   return (
     <div className="bg-gray-800 h-screen p-4">
       <div className="container mx-auto">
         <div className="flex flex-col items-center relative">
           <div className="flex flex-col items-center">
-            <input
-              type="number"
-              value={target}
-              onChange={(e) => setTarget(e.target.value)}
-              placeholder="masukkan target"
-              className="z-10 w-40 h-10 bg-white rounded-lg p-2"
-            />
+            {/* Input field */}
+            <div className="relative">
+              <input
+                type="number"
+                value={inputTarget}
+                onChange={handleTargetChange}
+                className="z-10 w-100 h-10 bg-white rounded-lg p-2 text-left"
+                placeholder="Masukkan target"
+              />
+              <button
+                onClick={setTargetFromInput}
+                className="z-10 absolute top-0 right-0 h-full px-4 py-2 bg-blue-500 text-white rounded-r-lg"
+              >
+                Set
+              </button>
+            </div>
             <img src={tasbih} className="w-80 relative z-10" />
             <p className="text-white text-4xl font-bold absolute top-20 left-0 right-0 bottom-40 flex items-center justify-center">
               {count}
