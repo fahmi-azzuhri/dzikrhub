@@ -24,45 +24,45 @@ export default function Doa() {
 
   return (
     <div>
-      <div className="flex flex-row items-center justify-center space-x-4 mb-4 my-6">
+      <div className="flex flex-wrap justify-center space-x-4 mb-4 my-6">
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("quran")}
         >
           Alquran
         </button>
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("hadits")}
         >
           Hadits
         </button>
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("pilihan")}
         >
           Pilihan
         </button>
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("harian")}
         >
           Harian
         </button>
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("ibadah")}
         >
           Ibadah
         </button>
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("haji")}
         >
           Haji
         </button>
         <button
-          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600 mb-2 sm:mb-0"
           onClick={() => filterBySource("lainnya")}
         >
           Lainnya
