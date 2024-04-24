@@ -1,31 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import bg from "../assets/bg.png";
+
 export default function Home() {
   return (
-    <div className="bg-gray-800 h-screen">
-      <div className="flex justify-center pt-8">
-        <Link to="/alquran">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded mx-2 text-center w-48 h-24">
-            Alquran
-          </button>
-        </Link>
-        <Link to="/doa">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded mx-2 w-48 h-24">
-            Doa
-          </button>
-        </Link>
-      </div>
-      <div className="flex justify-center mt-8">
-        <Link to="/asmaul-husna">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded mx-2 w-48 h-24">
-            Asmaul Husna
-          </button>
-        </Link>
-        <Link to="/dzikir">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded mx-2 w-48 h-24">
-            Dzikir
-          </button>
-        </Link>
+    <div className="relative bg-gray-800 h-screen flex justify-center items-center">
+      <img src={bg} className="absolute inset-0 w-full h-full" />
+      <div className="absolute flex flex-col items-center mt-16">
+        <div className="flex flex-row items-center flex-wrap justify-center mb-4">
+          <Link to="/alquran">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded mx-2 w-48 h-24 ">
+              Alquran
+            </button>
+          </Link>
+          <Link to="/doa">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded mx-2 w-48 h-24">
+              Doa
+            </button>
+          </Link>
+          <Link to="/asmaul-husna">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded mx-2 w-48 h-24 ">
+              Asmaul Husna
+            </button>
+          </Link>
+          <Link to="/dzikir">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded mx-2 w-48 h-24">
+              Dzikir
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
