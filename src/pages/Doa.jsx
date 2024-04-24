@@ -10,8 +10,7 @@ export default function Doa() {
       .get(`${import.meta.env.VITE_DZIKRAPI}/doa`)
       .then((res) => {
         setDoa(res.data.data);
-        setFilteredDoa(res.data.data); // Initialize filtered data with all prayers
-        console.log(res.data.data);
+        setFilteredDoa(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -25,15 +24,49 @@ export default function Doa() {
 
   return (
     <div>
-      <div className="flex space-x-4 mb-4">
-        <button onClick={() => filterBySource("uran")}>Uran</button>
-        <button onClick={() => filterBySource("hadits")}>Hadits</button>
-        <button onClick={() => filterBySource("pilihan")}>Pilihan</button>
-        <button onClick={() => filterBySource("harian")}>Harian</button>
-        <button onClick={() => filterBySource("ibadah")}>Ibadah</button>
-        <button onClick={() => filterBySource("haji")}>Haji</button>
-        <button onClick={() => filterBySource("lainnya")}>Lainnya</button>
-        <button onClick={() => setFilteredDoa(doa)}>Reset</button>
+      <div className="flex flex-row items-center justify-center space-x-4 mb-4 my-6">
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("quran")}
+        >
+          Alquran
+        </button>
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("hadits")}
+        >
+          Hadits
+        </button>
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("pilihan")}
+        >
+          Pilihan
+        </button>
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("harian")}
+        >
+          Harian
+        </button>
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("ibadah")}
+        >
+          Ibadah
+        </button>
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("haji")}
+        >
+          Haji
+        </button>
+        <button
+          className="py-2 px-4 bg-gray-800 text-white rounded hover:bg-gray-600"
+          onClick={() => filterBySource("lainnya")}
+        >
+          Lainnya
+        </button>
       </div>
       <div className="flex mx-auto container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredDoa.map((prayer) => (
