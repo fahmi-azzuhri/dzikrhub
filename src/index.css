@@ -12,10 +12,4 @@
     font-family: 'Medium';
 }
 
-@media (max-width: 640px) {
-  .flex-row > * {
-    width: calc(50% - 1rem); 
-    margin: 0.5rem;
-  }
-}
 
