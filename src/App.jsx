@@ -6,6 +6,7 @@ import Dzikir from "./pages/Dzikir";
 import AsmaulHusna from "./pages/AsmaulHusna";
 import Doa from "./pages/Doa";
 import Home from "./pages/Home";
+import DetailAyatQuran from "./pages/DetailAyatQuran";
 export default function App() {
   return (
     <div>
@@ -17,6 +18,10 @@ export default function App() {
           <Route path="/doa" element={<Doa />} />
           <Route path="/asmaul-husna" element={<AsmaulHusna />} />
           <Route path="/dzikir" element={<Dzikir />} />
+          <Route
+            path="/quran/ayah/surah/:surahId"
+            element={<DetailAyatQuran />}
+          />
         </Routes>
       </Router>
     </div>

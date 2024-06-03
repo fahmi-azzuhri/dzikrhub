@@ -1,20 +1,26 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import alquran from "../assets/alquran.svg";
+
 export default function Alquran() {
   const [quran, setQuran] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_DZIKRAPI}/quran/surah`)
       .then((res) => {
         setQuran(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => {
-        console.log(err);
+        throw err;
       });
   }, []);
+
+  const handleSurahClick = (surahId) => {
+    navigate(`/quran/ayah/surah/${surahId}`);
+  };
 
   return (
     <div className="bg-[#E6FBFC]">
@@ -24,7 +30,8 @@ export default function Alquran() {
           {quran.map((item) => (
             <div
               key={item.number}
-              className="flex bg-white rounded-md shadow-md p-4 justify-between"
+              className="flex bg-white rounded-md shadow-md p-4 justify-between cursor-pointer"
+              onClick={() => handleSurahClick(item.number)}
             >
               <div className="flex flex-row items-center gap-9">
                 <h2 className="text-lg font-medium"> {item.number} </h2>
@@ -34,7 +41,7 @@ export default function Alquran() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <h2 className="text-lg text-right arab text-5xl">
+                <h2 className="text-2xl text-right arab text-5xl">
                   {item.name_short}
                 </h2>
                 <p className="text-sm text-right">{item.translation_id}</p>
